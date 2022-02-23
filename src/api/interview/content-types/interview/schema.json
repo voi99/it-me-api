@@ -34,6 +34,12 @@
       "relation": "manyToOne",
       "target": "api::seniority.seniority",
       "inversedBy": "interviews"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "interviews"
     }
   }
 }

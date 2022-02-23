@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "singularName": "comment",
+    "pluralName": "comments",
+    "displayName": "Comment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "positive": {
+      "type": "text"
+    },
+    "negative": {
+      "type": "text"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "comments"
+    },
+    "position": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::position.position",
+      "inversedBy": "comments"
+    },
+    "seniority": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::seniority.seniority",
+      "inversedBy": "comments"
+    }
+  }
+}

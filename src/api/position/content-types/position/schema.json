@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "positions",
+  "info": {
+    "singularName": "position",
+    "pluralName": "positions",
+    "displayName": "Position"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "position"
+    },
+    "interviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::interview.interview",
+      "mappedBy": "position"
+    },
+    "salaries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::salary.salary",
+      "mappedBy": "position"
+    }
+  }
+}

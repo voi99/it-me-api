@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "salaries",
+  "info": {
+    "singularName": "salary",
+    "pluralName": "salaries",
+    "displayName": "Salary"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "decimal"
+    },
+    "position": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::position.position",
+      "inversedBy": "salaries"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "salaries"
+    },
+    "seniority": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::seniority.seniority",
+      "inversedBy": "salaries"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seniorities",
+  "info": {
+    "singularName": "seniority",
+    "pluralName": "seniorities",
+    "displayName": "Seniority"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "salaries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::salary.salary",
+      "mappedBy": "seniority"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "seniority"
+    },
+    "interviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::interview.interview",
+      "mappedBy": "seniority"
+    }
+  }
+}

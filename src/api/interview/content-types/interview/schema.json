@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interviews",
+  "info": {
+    "singularName": "interview",
+    "pluralName": "interviews",
+    "displayName": "Interview"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hrInterview": {
+      "type": "text"
+    },
+    "technicalInterview": {
+      "type": "text"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "interviews"
+    },
+    "position": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::position.position",
+      "inversedBy": "interviews"
+    },
+    "seniority": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::seniority.seniority",
+      "inversedBy": "interviews"
+    }
+  }
+}

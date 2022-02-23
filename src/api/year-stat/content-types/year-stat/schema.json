@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "year_stats",
+  "info": {
+    "singularName": "year-stat",
+    "pluralName": "year-stats",
+    "displayName": "YearStats",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "integer"
+    },
+    "income": {
+      "type": "decimal"
+    },
+    "profit": {
+      "type": "decimal"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "year_stats"
+    },
+    "employees": {
+      "type": "integer"
+    }
+  }
+}

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "company",
     "pluralName": "companies",
-    "displayName": "Company"
+    "displayName": "Company",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -31,14 +32,15 @@
       "mappedBy": "company"
     },
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "interviews": {
       "type": "relation",
@@ -50,6 +52,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::salary.salary",
+      "mappedBy": "company"
+    },
+    "year_stats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::year-stat.year-stat",
       "mappedBy": "company"
     }
   }

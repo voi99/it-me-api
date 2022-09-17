@@ -12,7 +12,7 @@ services:
       sizeGB: 1
     envVars:
       - key: NODE_VERSION
-        value: ~16.13.0
+        value: 12.22.0
       - key: NODE_ENV
         value: production
       - key: DATABASE_FILENAME
@@ -22,4 +22,6 @@ services:
       - key: ADMIN_JWT_SECRET
         generateValue: true
       - key: APP_KEYS
+        generateValue: true
+      - key: API_TOKEN_SALT
         generateValue: true
